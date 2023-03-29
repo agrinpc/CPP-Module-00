@@ -1,4 +1,4 @@
-NAME		= zoo
+NAME		= megaphone
 
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -6,12 +6,7 @@ RM			= rm -rf
 
 OBJDIR = .
 
-FILES		=	main \
-				Animal \
-				Cat \
-				Dog \
-				WrongAnimal \
-				WrongCat
+FILES		=	megaphone \
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
@@ -27,7 +22,7 @@ $(OBJDIR)/%.o: %.cpp
 	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJDIR) $(OBJ)
+	@$(RM) $(OBJDIR)/$(OBJ)
 
 fclean: clean
 	@$(RM) $(NAME)
