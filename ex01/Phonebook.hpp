@@ -7,6 +7,7 @@ class Phonebook {
 	private:
 		Contact contacts[8];
 		int		size;
+		int		cur;
 
 	public:
 		Phonebook();
@@ -14,7 +15,11 @@ class Phonebook {
 		~Phonebook();
 
 		void	add(Contact cont);
-		int	get_size();
+		int		get_size();
 		Contact *get_contacts();
+		void	print_all();
+		void	print_one(int idx);
 };
+
+std::string	format_text(std::string s);
 #endif
